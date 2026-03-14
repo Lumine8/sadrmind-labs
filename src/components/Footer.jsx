@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="footer__inner">
         <div className="footer__grid">
           <div>
             <div className="footer__brand-name">SADRmind Labs</div>
@@ -56,3 +56,4 @@ export default function Footer() {
     </footer>
   )
 }
+

@@ -1,0 +1,21 @@
+// ─── Text Gradient ─────────────────────────────
+@mixin text-gradient($from, $to) {
+  background: linear-gradient(135deg, $from, $to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// ─── Glass effect ──────────────────────────────
+@mixin glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(120, 130, 180, 0.12);
+}
+
+// ─── Flex center helper ────────────────────────
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

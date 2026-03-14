@@ -1,0 +1,71 @@
+@use 'variables' as *;
+
+// ── Text Gradient ────────────────────────────────────────────────────────────
+@mixin text-gradient($from, $to) {
+  background: linear-gradient(135deg, $from, $to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// ── Glass Surface ────────────────────────────────────────────────────────────
+@mixin glass {
+  background: rgba($bg-card, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid $border-subtle;
+}
+
+// ── Flex Center ──────────────────────────────────────────────────────────────
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ── Glow Orb ─────────────────────────────────────────────────────────────────
+@mixin orb($color, $size: 500px, $blur: 80px) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba($color, 0.18) 0%, transparent 70%);
+  filter: blur($blur);
+  position: absolute;
+  pointer-events: none;
+}
+
+// ── Responsive Container ─────────────────────────────────────────────────────
+@mixin container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 $space-xl;
+
+  @media (max-width: $bp-md) {
+    padding: 0 $space-lg;
+  }
+
+  @media (max-width: $bp-sm) {
+    padding: 0 $space-md;
+  }
+}
+
+// ── Section Padding ──────────────────────────────────────────────────────────
+@mixin section-padding {
+  padding: $space-5xl 0;
+
+  @media (max-width: $bp-md) {
+    padding: $space-3xl 0;
+  }
+
+  @media (max-width: $bp-sm) {
+    padding: $space-2xl 0;
+  }
+}
+
+// ── Truncate ─────────────────────────────────────────────────────────────────
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
