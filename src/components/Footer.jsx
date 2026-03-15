@@ -28,6 +28,9 @@ export default function Footer() {
             <ul className="footer__col-links">
               <li><Link to="/about">About</Link></li>
               <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/terms">Terms & Conditions</Link></li>
+              <li><Link to="/privacy">Privacy Policy</Link></li>
+              <li><Link to="/refund-policy">Refund Policy</Link></li>
             </ul>
           </div>
 
@@ -44,7 +47,7 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <span className="footer__copy">
-            © {new Date().getFullYear()} SADRmind Labs. All rights reserved.
+            © {new Date().getFullYear()} SADRmind Labs — A product studio by SANKAR GOPAN.
           </span>
           <div className="footer__social">
             <a href="#" aria-label="Twitter">𝕏</a>
